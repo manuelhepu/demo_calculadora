@@ -1,5 +1,5 @@
 FROM docker.io/library/tomcat:latest
-LABEL Jorge Juan Valderrama Gestoso
+MAINTAINER Ma Ping 
 
-RUN rm -rf /usr/local/tomcat/webapps/calculadora-ui-js
-COPY target/calculadora-ui-js.war /usr/local/tomcat/webapps/calculadora-ui-js.war
+RUN rm -rf /usr/local/tomcat/webapps/ROOT
+COPY target/calculator.war /usr/local/tomcat/webapps/ROOT.war
